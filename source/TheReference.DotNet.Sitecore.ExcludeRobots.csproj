@@ -59,7 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App_Config\Include\Sitecore.Analytics.ExcludeRobots.config" />
-    <None Include="App_Config\Include\zTheReferencePackages\Sitecore.Analytics.Tracking.Custom.config" />
+    <None Include="App_Config\Include\zExcludeRobots\Sitecore.Analytics.Tracking.Custom.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
