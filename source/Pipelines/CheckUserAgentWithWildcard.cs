@@ -20,11 +20,12 @@ namespace TheReference.DotNet.Sitecore.ExcludeRobots.Pipelines
             var userAgent = HttpContext.Request.UserAgent;
             if (userAgent == null || !ExcludeList.ContainsUserAgent(userAgent))
             {
-                Log.Info("UserAgent NOT excluded - " + userAgent, this);
+                //Log.Info("UserAgent NOT excluded - " + userAgent, this);
                 return;
             }
 
-            Log.Warn("UserAgent excluded - " + userAgent, this);
+            //Unwise to keep logging, as this is executed per session
+            //Log.Warn("UserAgent excluded - " + userAgent, this);
             args.IsInExcludeList = true;
         }
 
