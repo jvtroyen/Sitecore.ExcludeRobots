@@ -9,15 +9,16 @@ namespace TheReference.DotNet.Sitecore.ExcludeRobots.Pipelines
     {
         private static object excludeListSync = new object();
         private static WildcardExcludeList excludeList;
-        private HttpContextBase context;
 
         public override void Process(ExcludeRobotsArgs args)
         {
             Assert.ArgumentNotNull((object)args, "args");
-            Assert.IsNotNull(HttpContext, "HttpContext");
-            Assert.IsNotNull(HttpContext.Request, "Request");
 
-            var userAgent = HttpContext.Request.UserAgent;
+            var context = HttpContext;
+            Assert.IsNotNull(context, "HttpContext");
+            Assert.IsNotNull(context.Request, "Request");
+
+            var userAgent = context.Request.UserAgent;
             if (userAgent == null || !ExcludeList.ContainsUserAgent(userAgent))
             {
                 //Log.Info("UserAgent NOT excluded - " + userAgent, this);
@@ -53,11 +54,10 @@ namespace TheReference.DotNet.Sitecore.ExcludeRobots.Pipelines
         {
             get
             {
-                if (context != null)
-                    return context;
                 if (System.Web.HttpContext.Current == null)
                     return null;
-                return context = new HttpContextWrapper(System.Web.HttpContext.Current);
+
+                return new HttpContextWrapper(System.Web.HttpContext.Current);
             }
         }
     }
