@@ -59,7 +59,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App_Config\Include\Sitecore.Analytics.ExcludeRobots.config" />
+    <None Include="App_Config\Include\Sitecore.Analytics.ExcludeRobots.custom.config" />
     <None Include="App_Config\Include\zExcludeRobots\Sitecore.Analytics.Tracking.Custom.config" />
     <None Include="packages.config" />
   </ItemGroup>

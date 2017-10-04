@@ -60,7 +60,7 @@ namespace TheReference.DotNet.Sitecore.ExcludeRobots.Configuration
 
         private static HashSet<string> GetUserAgents()
         {
-            XmlNode configNode = Factory.GetConfigNode("analyticsExcludeRobots/excludedUserAgents");
+            XmlNode configNode = Factory.GetConfigNode("analyticsExcludeRobots/excludedUserAgentsWithWildcards");
             HashSet<string> hashSet = new HashSet<string>();
             if (configNode == null)
                 return hashSet;
@@ -80,7 +80,7 @@ namespace TheReference.DotNet.Sitecore.ExcludeRobots.Configuration
 
         private static HashSet<string> GetUserAgentsWithWildcard()
         {
-            XmlNode configNode = Factory.GetConfigNode("analyticsExcludeRobots/excludedUserAgents");
+            XmlNode configNode = Factory.GetConfigNode("analyticsExcludeRobots/excludedUserAgentsWithWildcards");
             HashSet<string> hashSet = new HashSet<string>();
             if (configNode == null)
                 return hashSet;
