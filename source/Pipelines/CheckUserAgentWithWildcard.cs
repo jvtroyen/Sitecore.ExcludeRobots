@@ -19,14 +19,12 @@ namespace TheReference.DotNet.Sitecore.ExcludeRobots.Pipelines
             Assert.IsNotNull(context.Request, "Request");
 
             var userAgent = context.Request.UserAgent;
-            if (userAgent == null || !ExcludeList.ContainsUserAgent(userAgent))
+            //Empty userAgents are treated as bad
+            if (!string.IsNullOrEmpty(userAgent) && !ExcludeList.ContainsUserAgent(userAgent))
             {
-                //Log.Info("UserAgent NOT excluded - " + userAgent, this);
                 return;
             }
 
-            //Unwise to keep logging, as this is executed per session
-            //Log.Warn("UserAgent excluded - " + userAgent, this);
             args.IsInExcludeList = true;
         }
 
