@@ -31,7 +31,8 @@ namespace TheReference.DotNet.Sitecore.ExcludeRobots.Configuration
 
         public static WildcardExcludeList GetExcludeList()
         {
-            return new WildcardExcludeList(GetIPAddresses(), GetUserAgents(), GetUserAgentsWithWildcard());
+            var userAgentList = GetUserAgentList();
+            return new WildcardExcludeList(GetIPAddresses(), GetUserAgents(userAgentList), GetUserAgentsWithWildcard(userAgentList));
         }
 
         public bool ContainsIpAddress(string addressString)
@@ -58,18 +59,15 @@ namespace TheReference.DotNet.Sitecore.ExcludeRobots.Configuration
             return IPHelper.GetIPList(configNode) ?? new IPList();
         }
 
-        private static HashSet<string> GetUserAgents()
+        private static HashSet<string> GetUserAgents(string userAgentList)
         {
-            XmlNode configNode = Factory.GetConfigNode("analyticsExcludeRobots/excludedUserAgentsWithWildcards");
             HashSet<string> hashSet = new HashSet<string>();
-            if (configNode == null)
-                return hashSet;
-            string innerText = configNode.InnerText;
             char[] chArray = new char[1]
             {
                 '\n'
             };
-            foreach (string str1 in innerText.Split(chArray))
+
+            foreach (string str1 in userAgentList.Split(chArray))
             {
                 string str2 = str1.Trim();
                 if (!(str2 == string.Empty) && !str2.StartsWith("#") && !str2.Contains(_wildcard) && !hashSet.Contains(str2))
@@ -78,24 +76,46 @@ namespace TheReference.DotNet.Sitecore.ExcludeRobots.Configuration
             return hashSet;
         }
 
-        private static HashSet<string> GetUserAgentsWithWildcard()
+        private static HashSet<string> GetUserAgentsWithWildcard(string userAgentList)
         {
-            XmlNode configNode = Factory.GetConfigNode("analyticsExcludeRobots/excludedUserAgentsWithWildcards");
             HashSet<string> hashSet = new HashSet<string>();
-            if (configNode == null)
-                return hashSet;
-            string innerText = configNode.InnerText;
             char[] chArray = new char[1]
             {
                 '\n'
             };
-            foreach (string str1 in innerText.Split(chArray))
+
+            foreach (string str1 in userAgentList.Split(chArray))
             {
                 string str2 = str1.Trim();
                 if (!(str2 == string.Empty) && !str2.StartsWith("#") && str2.Contains(_wildcard) && !hashSet.Contains(str2))
                     hashSet.Add(str2);
             }
             return hashSet;
+        }
+
+        private static string GetUserAgentList()
+        {
+            //1. Try online list from GitHub
+            try
+            {
+                using (var client = new WebClient())
+                {
+                    var url = "https://raw.githubusercontent.com/jvtroyen/Sitecore.ExcludeRobots/master/downloads/useragents.txt";
+                    return client.DownloadString(url);
+                }
+            }
+            catch
+            {
+                //We don't really care what went wrong.
+            }
+
+            //2. Fallback, from settings.
+            XmlNode configNode = Factory.GetConfigNode("analyticsExcludeRobots/excludedUserAgentsWithWildcards");
+            if (configNode != null)
+            {
+                return configNode.InnerText;
+            }
+            return null;
         }
     }
 }
