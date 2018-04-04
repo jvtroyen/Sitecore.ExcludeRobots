@@ -9,7 +9,7 @@ admantx-euaspb/2.5 (+http://www.admantx.com/service-fetcher.html)
 AdsBot-Google (+http://www.google.com/adsbot.html)
 AdsBot-Google-Mobile (+http://www.google.com/mobile/adsbot.html) Mozilla (iPhone; U; CPU iPhone OS 3 0 like Mac OS X) AppleWebKit (KHTML, like Gecko) Mobile Safari
 AdsTxtCrawler/1.0
-Ads.txt-crawler
+Ads.txt-crawler *
 AdXVastFetcher-Google
 AESOP_com_SpiderMan
 aipbot/1.0 (aipbot; http://www.aipbot.com; aipbot@aipbot.com)
@@ -167,6 +167,7 @@ GigabotSiteSearch/*
 GoForIt.com
 GOFORITBOT ( http://www.goforit.com/about/ )
 GoldenCanBot (http://www.GoldenCan.com/botinfo.aspx)
+Google Chrome SEOBulls Crawler Bot Alpha
 Google favicon
 Google-Adwords-Instant (+http://www.google.com/adsbot.html)
 Googlebot
@@ -251,6 +252,7 @@ Mackster( http://www.ukwizz.com )
 MarkWatch/1.0
 Marvin v0.3
 MaSagool/1.0 (MaSagool; http://sagool.jp/; masagool@sagool.jp)
+MauiBot (crawler.feedback+wc@gmail.com)
 MaxPointCrawler/Nutch-1.10 (maxpoint.crawler at maxpointinteractive dot com)
 MBCrawler/1.0 (https://monitorbacklinks.com)
 Mediapartners-Google
@@ -383,7 +385,9 @@ Mozilla/5.0 (compatible; LinkisBot/*
 Mozilla/5.0 (compatible; LinkosmosBot; +http://www.linkosmos.com/bot)
 Mozilla/5.0 (compatible; LinkpadBot/1.12; +http://www.linkpad.ru)
 Mozilla/5.0 (compatible; Linux x86_64; Mail.RU_Bot/*
+Mozilla/5.0 (compatible; Linux x86_64; Meta_Bot/1.1)
 Mozilla/5.0 (compatible; ltbot/0.3.6 +http://www.kdsl.tu-darmstadt.de/de/kdsl/research-program/crawling-and-semantic-structuring/)
+Mozilla/5.0 (compatible; Mappy/1.0; +http://mappydata.net/bot/)
 Mozilla/5.0 (compatible; meanpathbot/1.0; +http://www.meanpath.com/meanpathbot.html)
 Mozilla/5.0 (compatible; MegaIndex.com/2.0; +http://megaindex.com/crawler)
 Mozilla/5.0 (compatible; MegaIndex.ru/2.0; +http://megaindex.com/crawler)
@@ -724,6 +728,7 @@ Speedy Spider*
 Speedy_Spider*
 SpeedySpider*
 Spider_Monkey/7.06 (SpiderMonkey.ca info at http://SpiderMonkey.ca /sm.shtml)
+Spiderbook
 spiderbot*
 SpotBot v3.0/2015 (Innovatiespotter - crawler)
 sproose/0.1 (sproose bot; http://www.sproose.com/bot.html; crawler@sproose.com)
@@ -806,6 +811,7 @@ worio bot (+http://worio.com)
 WorldLight
 Wotbox/2.01 (+http://www.wotbox.com/bot/)
 Wotbox/alpha0.5.1 (bot@wotbox.com; http://www.wotbox.com) Java/1.4.1_02
+wprocketbot, tell us if we poll to hard (+http://wp-rocket.me)
 www.proodle.com
 WWWeasel Robot v1.00 (http://wwweasel.de)
 wwwster/1.4 (Beta, mailto:gue@cis.uni-muenchen.de)
@@ -833,6 +839,7 @@ Yanga WorldSearch Bot v1.1/beta (http://www.yanga.co.uk/)
 Yeti/*
 YisouSpider
 YodaoBot/1.0 (http://www.yodao.com/help/webmaster/spider/; )
+your-search-bot
 Zabbix
 Zao/*
 Zao-Crawler
