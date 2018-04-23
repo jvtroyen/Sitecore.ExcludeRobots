@@ -32,6 +32,7 @@ namespace TheReference.DotNet.Sitecore.ExcludeRobots.Pipelines
         {
             get
             {
+                //TODO: modify this, so it is cached for 10 hours or so
                 if (excludeList == null)
                 {
                     lock (excludeListSync)
