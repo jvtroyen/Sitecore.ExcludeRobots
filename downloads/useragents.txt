@@ -30,6 +30,7 @@ AtlocalBot/1.1 +(http://www.atlocal.com/local-web-site-owner.html)
 Auto Spider 1.0
 axadine/ (Axadine Crawler; http://www.axada.de/; )
 BaboomBot/1.x.x (+http://www.baboom.us)
+Baiduspider
 BaiDuSpider*
 Barkrowler/0.7 (+http://www.exensa.com/crawl)
 BeNosey Mohawk Crawler
@@ -110,6 +111,7 @@ EgotoBot/4.8 (+http://www.egoto.com/about.htm)
 EngineBot/3.0
 elefent/1.2 (Web Crawler; *
 EMS Nutch Spider/Nutch-1.12
+Enolyst Crawler/0.1
 envolk/1.7 (+http://www.envolk.com/envolkspiderinfo.php)
 envolk[ITS]spider/1.6(+http://www.envolk.com/envolkspider.html)
 eseek-larbin_2.6.2 crawler@exactseek.com
