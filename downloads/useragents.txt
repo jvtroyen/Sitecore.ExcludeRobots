@@ -58,6 +58,7 @@ Buzzbot/1.0 (Buzzbot; http://www.buzzstream.com; buzzbot@buzzstream.com)
 ByWebSite Search Engine Spider
 CCBot/2.0 (http://commoncrawl.org/faq/)
 cfetch/1.0
+CheckMarkNetwork/1.0 (+http://www.checkmarknetwork.com/spider.html)
 CipinetBot (http://www.cipinet.com/bot.html)
 citenikbot/0.4 (albert; http://www.citenik.co.uk/bot.html)
 ClickTale bot
